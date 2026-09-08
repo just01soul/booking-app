@@ -1,75 +1,88 @@
-# Nuxt Minimal Starter
+# Booking App
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Приложение для онлайн-бронирования столика в ресторане.
 
-## Setup
+## 📋 Описание
 
-Make sure to install dependencies:
+Тестовое задание для позиции Junior Frontend Developer. Реализована страница бронирования столика с формой, валидацией и экраном подтверждения.
+
+## 🛠 Технологии
+
+- **Vue 3** — Composition API, script setup
+- **Nuxt 3** — pages, composables, layouts
+- **TypeScript** — строгая типизация
+- **Zod** — валидация данных (без лишних зависимостей)
+- **SCSS** — стилизация
+
+## 📁 Архитектура
+├── components/
+│ ├── BookingForm/ # Форма бронирования
+│ ├── ConfirmationScreen/ # Экран подтверждения
+│ └── Ui/ # Переиспользуемые UI-компоненты
+├── composables/ # Логика формы (useBookingForm)
+├── types/ # TypeScript интерфейсы
+├── utils/ # Валидация и схема Zod
+├── constants/ # Константы (временные слоты)
+└── pages/ # Страницы приложения
+
+text
+
+## ✨ Особенности реализации
+
+- ✅ **Валидация через Zod** — строгая типизация и проверка данных
+- ✅ **Управление состоянием** — нативные средства Vue 3 (Composition API + синглтон)
+- ✅ **Валидация на blur** — ошибки появляются при потере фокуса
+- ✅ **Валидация при отправке** — проверка всей формы перед отправкой
+- ✅ **Нормализация телефона** — удаление скобок и дефисов
+- ✅ **Анимация смены экранов** — плавные переходы через `<Transition>`
+- ✅ **Лоадер на кнопке** — индикация загрузки при отправке
+- ✅ **Адаптивная вёрстка** — корректное отображение на 375px и 1280px
+- ✅ **TypeScript** — строгая типизация всех сущностей
+
+## 🚀 Установка и запуск
 
 ```bash
-# npm
+# Установка зависимостей
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+# Запуск в режиме разработки
 npm run dev
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
+# Сборка для production
 npm run build
 
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
+# Предпросмотр production версии
 npm run preview
 
-# pnpm
-pnpm preview
+# Проверка кода (ESLint)
+npm run lint
 
-# yarn
-yarn preview
+# Исправление ошибок линтинга
+npm run lint:fix
 
-# bun
-bun run preview
+# Форматирование кода (Prettier)
+npm run format
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## 📱 Адаптивность
+
+Десктоп (1280px+): Полноценная форма с грид-расположением полей
+
+Мобильные устройства (375px): Вертикальное расположение, уменьшенные отступы
+
+## 📝 Что осталось доделать
+
+□ Юнит-тесты для composable (Vitest)
+□ E2E тесты (Playwright)
+□ Интеграция с реальным API
+□ Обработка ошибок сервера
+□ Сохранение состояния в localStorage
+□ Accessibility (a11y)
+
+## 🔗 Ссылки
+
+- [Репозиторий на GitHub](https://github.com/just01soul/booking-app.git)
+
+- [Демо](https://github.com/just01soul/booking-app.git)
+
+---
