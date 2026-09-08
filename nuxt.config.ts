@@ -17,10 +17,14 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'node-server'
+    preset: 'static',
+    prerender: {
+      routes: ['/']
+    }
   },
 
   app: {
+    baseURL: '/booking-app/',
     head: {
       title: 'Бронирование столика',
       meta: [
