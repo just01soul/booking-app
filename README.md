@@ -84,6 +84,6 @@ npm run format
 
 - [Репозиторий на GitHub](https://github.com/just01soul/booking-app.git)
 
-- [Демо](https://github.com/just01soul/booking-app.git)
+- [Демо](https://just01soul.github.io/booking-app/)
 
 ---
