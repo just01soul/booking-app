@@ -174,7 +174,9 @@ const handleReset = () => {
     display: flex;
     align-items: center;
     padding: 12px 0;
+    gap: 12px;
     border-bottom: 1px solid #e0e0e0;
+    overflow: hidden;
 
     &:last-child {
       border-bottom: none;
@@ -182,8 +184,10 @@ const handleReset = () => {
   }
 
   &__detail-icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
     font-size: 20px;
-    margin-right: 16px;
   }
 
   &__detail-content {

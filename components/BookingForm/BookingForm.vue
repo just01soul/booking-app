@@ -124,12 +124,8 @@ const hasData = computed(() => {
 
 // Функция склонения слова "гость"
 const getGuestsWord = (count: number): string => {
-  const lastDigit = count % 10;
-  const lastTwoDigits = count % 100;
 
-  if (lastTwoDigits >= 11 && lastTwoDigits <= 19) return 'гостей';
-  if (lastDigit === 1) return 'гость';
-  if (lastDigit >= 2 && lastDigit <= 4) return 'гостя';
+  if (count >= 1 && count <= 4) return 'гостя';
   return 'гостей';
 };
 
@@ -225,12 +221,13 @@ const handleSubmit = async () => {
 
   &__select {
     width: 100%;
+    min-height: 46px;
     padding: 12px 16px;
     font-size: 16px;
     font-family: inherit;
     color: #1a1a1a;
-    background: #fafaf8;
-    border: 2px solid #e0e0e0;
+    background: #ffffff;
+    border: 2px solid #fafaf8;
     border-radius: 10px;
     outline: none;
     transition: all 0.2s ease;
@@ -274,9 +271,9 @@ const handleSubmit = async () => {
   }
 
   &__error {
+    margin-top: 2px;
     font-size: 13px;
     color: #f35d62;
-    line-height: 1.4;
   }
 
   &__actions {

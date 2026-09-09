@@ -111,7 +111,7 @@ const handleBlur = () => {
     position: relative;
     border-radius: 10px;
     border: 2px solid #fafaf8;
-    background: #fafaf8;
+    background: #ffffff;
     transition: all 0.2s ease;
 
     &:hover:not(:has(.ui-input__field:disabled)) {
@@ -170,11 +170,15 @@ const handleBlur = () => {
 
     /* Стили для type="date" */
     &[type='date'] {
+       -webkit-appearance: none;
+        appearance: none;
+        height: 42px;
+
       &::-webkit-calendar-picker-indicator {
         opacity: 0.5;
         transition: opacity 0.2s;
         cursor: pointer;
-
+       
         &:hover {
           opacity: 1;
         }
